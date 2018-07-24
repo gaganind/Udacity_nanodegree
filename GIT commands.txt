@@ -1,0 +1,76 @@
+                                                          GIT
+
+*Git is a free and open source distributed version control system(VCS) designed to handle everything from small to very large projects with speed and efficiency
+
+*GitHub is a web-based Git repository hosting service, 
+which offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features.
+
+*GitHub.com — The website you log into to view repositories online.
+
+*GitHub Desktop — An application that you can install on your computer to help you synchronize local code with GitHub.com.
+
+
+__________________________________________________________________________________________________________________________________________________________
+git init     				>> To Intilize Git in that repository
+git clone    				>> To Clone Git repository on your local system.
+git status   				>> To find status of git presently
+
+>>>>>   LOGS:
+git show <7digitcode(SHA)>  >>Show modification done for particular code
+git log -p                  >> Package Logs for whole repository
+git log --stat              >> Logs with stats (when,whom,what sort of changes)
+git log --oneline           >>  One line Log with Comments
+git log --oneline --graph --all   >> Show all branches in repository with bullets
+________________________________________________________________________________________________________________________________________________________
+git add <file>	
+git rm --cached <file>
+git commit                  >> It will prompt next to enter comments
+git commit -m "Comments"    >> It will ignore prompt
+git commit --amend          >> Add all changes to last commit without creating any new commit
+git diff                    >> show you the changes that have not yet been committed.
+.gitignore file             >> If we want to ignore any particular file to be added to staging area again and again)
+________________________________________________________________________________________________________________________________________________________
+git tag -a v1.0    			>> Create a tag with name 'v1.0 to most recent commit'
+git tag            			>> list all tags
+git tag -d v1.0    			>> Deleting the tag
+git tag -a v1.1 a87984      >> Create a tag with name 'v1.1 to commit with the SHA a87084
+
+git branch                  >> List all branches (* with active branch)
+git branch sidebar          >> Create branch with name 'sidebar'
+git branch sidebar2 42a69f  >> Create branch with name 'sidebar' and having it point to commit with SHA 42a69f
+git branch -d sidebar       >> Delete sidebar branch
+
+git checkout sidebar        >> To checkout to 'sidebar' branch
+git checkout -b sidebar3    >> Create sidebar3 branch and switch to it
+git checkout -b sidebar4 0ad5a7a6   >> Create sidebar4 at commit's SHA :0ad5a7a6 branch and switch to it
+
+Merge: Regular merge , Fast-forward merge
+git merge <name-of-branch-to-merge-in>
+git reset --hard HEAD^      >> Undo the merge
+_________________________________________________________________________________________________________________________________________________________
+git commit --amend
+git revert a87984           >> Rever changes of particular SHA and commit it.
+
+git reflog                  >> Just like 'git log --oneline' but will show log for all branches
+
+git reset <reference-to-commit>
+commit refrencing:
+https://classroom.udacity.com/nanodegrees/nd025-indsc/parts/e81e6aaa-b11f-4ef2-8d96-405bc57d2bfc/modules/6d0c70a9-19af-49df-a6d8-601298dcbbf5/lessons/f02167ad-3ba7-40e0-a157-e5320a5b0dc8/concepts/fed81eb7-49b4-4129-9f6b-8201e0796fd8
+--mixed
+--soft
+--hard
+
+git branch backup
+git megre backup
+_________________________________________________________________________________________________________________________________________________________
+git remote add origin https://github.com/richardkalehoff/RichardsFantasticProject.git  >>
+git push <remote-shortname> <branch>
+
+git pull <remote-shortname> <branch>
+git fetch origin master
+____________________________________________________________________________________________________________________________________________________________
+git log --author="Richard Kalehoff"              >>filter commits
+git log --grep="border radius issue in Safari"   >>filter commits
+git shortlog					                 >>group commits by author
+
+git rebase -i HEAD~3
